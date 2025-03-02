@@ -19,7 +19,7 @@ function isValid(value, type) {
     case 'phone':
       return isMobilePhone(value);
     default:
-      return isAlphanumeric(value, 'en-US', { ignore: '.,' });
+      return isAlphanumeric(value, 'en-US', { ignore: '. ,' });
   }
 }
 
