@@ -1,0 +1,118 @@
+:root {
+  --light: rgb(255, 243, 216);
+  --dark: #242424;
+  --accent1: #646cff;
+  --accent2: #c1c7ff;
+
+  --color: var(--light);
+  --background-color: var(--dark);
+  --focus-color: var(--accent1);
+  --button-color: var(--accent2);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  color-scheme: light dark;
+  background-color: var(--background-color);
+  color: var(--color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  max-width: 700px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+#app {
+  width: 100%;
+  text-align: center;
+}
+
+#app > form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+label > span {
+  flex-shrink: 0;
+}
+
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: var(--color);
+  color: var(--background-color);
+  filter: opacity(0.8);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.25s;
+}
+
+button {
+  margin-top: 1rem;
+  font-weight: 500;
+  background-color: var(--button-color);
+}
+
+input:hover,
+button:hover {
+  border-color: var(--focus-color);
+}
+
+input:focus,
+input:focus-visible,
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color: var(--dark);
+    --background-color: var(--light);
+    --focus-color: var(--accent2);
+    --button-color: var(--accent1);
+  }
+
+  input {
+    filter: opacity(1);
+    background-color: var(--background-color);
+    color: var(--color);
+    border: 1px solid #cccccc;
+  }
+}
